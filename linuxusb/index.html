@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Setting up a Live USB for Legacy iOS Kit</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+    li {
+      margin-bottom: 12px;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Setting up a Live USB for Legacy iOS Kit</h1>
+  <p>This tutorial walks you through creating a bootable USB stick using Ubuntu on a Windows PC. A bootable USB lets you install Ubuntu for Legacy iOS kit without affecting your current system.</p>
+<h3>What You'll Need:</h3>
+<ul>
+	<li>
+	A 4GB or larger USB flash drive or SD card
+	</li>
+	<li>
+	A Windows PC
+	</li>
+	<li>
+      <a href="https://linuxmint.com/edition.php?id=320" target="_blank">A Linux Mint ISO file (Download)</a><br>
+      <ul>
+        <li>
+          Most other Linux distributions are also compatible, but Linux Mint XFCE is recommended due to it running better on older PCs.
+        </li>
+      </ul>
+	</li>
+	<li>
+	<a href="https://rufus.ie/" target="_blank">Rufus software (Download)</a><br>
+	</li>
+</ul>
+<h3>Notes</h3>
+<ul>
+	<li>
+	<strong>All data on the flash drive will be destroyed. Back up any important files you may have</strong>
+	</li>
+	<li>
+	This is <strong>NOT</strong> installing Linux on your computer. It works by running Linux on the flash drive itself, while leaving your current system unaffected, similarly to a dualboot.
+	</li>
+</ul>
+<h2>Steps</h2>  
+<h3>Flashing</h3>
+<ol>
+<li>Open Rufus and insert your flash drive and select it in the <code>Device</code> field.
+<li>In the <code>Boot selection</code> field, click <code>SELECT</code> and select the Ubuntu ISO file you downloaded.</li>
+<li>Change the slider for <code>Persistent partition size</code> to its maximum amount.</li>
+<li>In <code>Partition scheme</code>, Choose MBR if you have a legacy BIOS system, or GPT if you have a UEFI system. If unsure, leave it as MBR.</li>
+<li>Once done, press <code>START</code>. If you are prompted to choose an install mode, select <code>Write in ISO image mode</code>, then press <code>OK</code> to the following popup. It may take around 5-10 minutes to install to your flash drive.</li>
+</ol>
+<h3>Booting into the USB</h3>
+<p>Once the process has completed, leave the flash drive connected to your computer.<p>
+<ol>
+<li>Restart your computer and enter your BIOS or boot menu (usually by pressing F2, F12, DEL, or ESC during startup).</li>
+<li>Select your flash drive in the boot menu as your boot device. You should see the Linux Mint boot menu. Select <code>Start Linux Mint</code>. It may take a while for the desktop to load.</li>
+</ol>
+<p>You may now follow the instructions on <a href="https://github.com/LukeZGD/Legacy-iOS-Kit/wiki/How-to-Use" target="_blank">Legacy iOS Kit's How To Use page</a><br> for Linux.<p>
+</body>
+</html>
