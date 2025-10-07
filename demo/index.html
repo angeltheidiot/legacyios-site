@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Download Apple Partner Demonstrations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 0 20px;
+      background: #f9f9f9;
+      color: #333;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: white;
+      margin-bottom: 1em;
+      padding: 1em;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    a {
+      text-decoration: none;
+      color: #1a73e8;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Dark mode styles */
+    body.dark {
+      background: #121212;
+      color: #e0e0e0;
+    }
+    body.dark li {
+      background: #1e1e1e;
+      box-shadow: 0 0 8px rgba(255,255,255,0.1);
+    }
+    body.dark a {
+      color: #90caf9;
+    }
+    /* Toggle button styles */
+    #toggle-dark {
+      display: block;
+      margin: 0 auto 2em auto;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background: #1a73e8;
+      color: white;
+      transition: background 0.3s ease;
+    }
+    #toggle-dark:hover {
+      background: #155ab6;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggle-dark">Switch to Dark Mode</button>
+
+  <h1>Download Apple Partner Demonstration Profiles</h1>
+  <ul>
+    <li>
+      <a href="demo/Apple%20Partner%20Demonstration%202014.mobileprovision" download>
+        2014 Apple Partner Demonstration
+      </a>
+    </li>
+    <li>
+      <a href="demo/Apple%20Partner%20Demonstration%202015.mobileprovision" download>
+        2015 Apple Partner Demonstration
+      </a>
+    </li>
+  </ul>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-dark');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      if(body.classList.contains('dark')){
+        toggleBtn.textContent = 'Switch to Light Mode';
+      } else {
+        toggleBtn.textContent = 'Switch to Dark Mode';
+      }
+    });
+  </script>
+</body>
+</html>
