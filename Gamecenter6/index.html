@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Center Fix Instructions by Calvink19</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        h2 {
+            color: #0056b3;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .directory {
+            font-weight: bold;
+            color: #0061cd;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>How to Fix Game Center on iOS 6</h2>
+
+    <ol>
+        <li>
+            Install signed bundle certificate from the following link:
+            <a href="http://tlsroot.litten.ca">http://tlsroot.litten.ca</a>
+        </li>
+        <li>Install the application <strong>iFile</strong> from cydia.</li>
+        <li>
+            Navigate to the directory: <code class="directory">/var/mobile/Library/Preferences</code>.
+        </li>
+        <li>
+            Look for any *folders* with names extremely similar to the following and <strong>delete or move</strong> them:
+            <code>purplebuddy</code>, <code>accountsettings</code>, <code>itunesstored</code>, <code>appstore</code>, <code>gamecenter</code>, <code>iTunesStore</code>, and <code>gamed</code>.
+        </li>
+        <li>
+            Next, go to the directory: <code class="directory">/var/mobile/Library/Caches</code> and repeat the same process. However, instead of folders, you will be dealing with <code>.plist</code> *files*.
+        </li>
+        <li>
+            After deleting or moving these files, you need <strong>reboot (not respring)</strong> your device.
+        </li>
+        <li>Then, go through the setup screen as usual.</li>
+        <li>
+            When you reach the Apple ID login screen, sign in correctly, as you now have the required certificates installed.
+        </li>
+        <li>
+            For the final step, open <strong>Game Center</strong> and check if it loads. If it does not, please attempt the entire process again from the beginning.
+        
+        
+      <li>
+      Credits to calvink19 for originally writing this guide (i know this is not a "step" but its worth mentioning here)
+</body>
+</html>
+
